@@ -1,0 +1,29 @@
+{% extends 'layout_admin.html' %}
+{% block konten %}
+    <h1>INPUT MENU</h1>
+    <form action="/aksiupdate" method="post" >
+
+        <input type="hidden" name="id" value="{{ value[0] }}">
+
+
+        <input type="text" name="Name" placeholder="Dessert_name" value="{{ value[1] }}">
+
+
+        <textarea name="Description" cols="30" rows="10" placeholder="Dessert_description">{{ value[2] }}</textarea>
+
+
+        <textarea name="Allergens" cols="20" rows="10" placeholder="Allergens_warning">{{ value[3] }}</textarea>
+
+
+        <input type="int" name="Calories" placeholder="Dessert_calories" value="{{ value[4] }}">
+
+
+        <input type="text" name="Price" placeholder="Dessert_price" value="{{ value[5] }}">
+
+
+        <input type="text" name="Rating" placeholder="Dessert_rating" value="{{ value[6] }}">
+
+
+        <button type="submit">KIRIM</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block konten %}
+
+<div class="login-container">
+
+    <h1>HOME - LOGIN</h1>
+    
+    <form action="/aksi_login" method="post" class="login-form">
+
+        <label for="chef">USERNAME:</label>
+        <input type="text" id="chef" name="username" class="form-control" placeholder="Enter your username">
+
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+
+        <button type="submit" class="btn login-btn">LOGIN</button>
+
+    </form>
+
+    <div class="login-info">
+
+        <p><i>Username1: blue</i><br>
+        <i>Password1: 123456</i></p>
+
+        <p><i>Username2: red</i><br>
+        <i>Password2: 654321</i></p>
+
+    </div>
+</div>
+
+<style>
+
+    .login-container 
+    {
+        background-color: #fffaf0; 
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 
+    {
+        color: #4d4038; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label 
+    {
+        color: #4d4038; 
+    }
+
+    .form-control 
+    {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #b69a79; 
+        border-radius: 5px;
+        background-color: #f9f5f0; 
+    }
+
+    .form-control:focus
+    {
+        border-color: #9c8164;
+    }
+
+    .login-btn 
+    {
+        background-color: #b69a79; 
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .login-btn:hover 
+    {
+        background-color: #9c8164;
+    }
+
+    .login-info 
+    {
+        margin-top: 20px;
+        text-align: center;
+        color: #4d4038;
+    }
+
+</style>
+{% endblock %}

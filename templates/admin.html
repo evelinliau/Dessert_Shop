@@ -1,0 +1,34 @@
+{% extends 'layout_admin.html' %}
+{% block konten %}
+<h1>Input Menu</h1>
+<form action="/aksiupdate" method="post">
+
+    <input type="hidden" name="id">
+
+    <div class="form-group mb-3">
+        <input type="text" name="Name" placeholder="Dessert Name" class="form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <textarea name="Description" cols="30" rows="3" placeholder="Dessert Description" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        <textarea name="Allergens" cols="20" rows="2" placeholder="Allergens Warning" class="form-control" required></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="number" name="Calories" placeholder="Dessert Calories" class="form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" name="Price" placeholder="Dessert Price" class="form-control" required>
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="text" name="Rating" placeholder="Dessert Rating" class="form-control" required>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}
